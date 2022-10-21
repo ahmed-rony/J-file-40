@@ -11,13 +11,11 @@ const PostInfo = () => {
         const api = await fetch(`https://jsonplaceholder.typicode.com/posts/${post}`);
         const data = await api.json();
         setPostInfo(data);
-        console.log(postInfo);
     }
     const getComment = async (comment) => {
         const api2 = await fetch(`https://jsonplaceholder.typicode.com/comments/${comment}`);
         const data2 = await api2.json();
         setPostComment(data2);
-        
     }
     useEffect( () =>{
         getPostInfo(params.id);
